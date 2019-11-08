@@ -6,8 +6,6 @@ addons:
   ssh_known_hosts:
   - engnroom.org
   - ftp.greenhost.nl
-
-
 before_install:
 - openssl aes-256-cbc -K $encrypted_11a989b64597_key -iv $encrypted_11a989b64597_iv
   -in deploy-key-2019.enc -out deploy-key-2019 -d
