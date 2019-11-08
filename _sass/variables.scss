@@ -1,0 +1,85 @@
+$bp-larger-than-mobile    : "min-width: 400px" !default;
+$bp-larger-than-phablet   : "min-width: 550px" !default;
+$bp-larger-than-tablet    : "min-width: 750px" !default;
+$bp-larger-than-desktop   : "min-width: 1000px" !default;
+$bp-larger-than-desktophd : "min-width: 1200px" !default;
+
+// Colors
+$light-grey: #eee !default;
+$dark-grey: #464646 !default;
+$primary-color: #95335E !default;
+$secondary-color: lighten($dark-grey, 13.5%) !default;
+$border-color: #bbb !default;
+$link-color: #DB542E !default;
+$link-visited: #DB542E !default;
+$link-active: #DB542E !default;
+$font-color: $dark-grey;
+
+// Typography
+$font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+//Grid Variables
+$container-width: 960px !default;
+$container-width-larger-than-mobile: 85% !default;
+$container-width-larger-than-phablet: 80% !default;
+$total-columns: 12 !default;
+$column-width: 100 / $total-columns !default; // calculates individual column width based off of # of columns
+$column-margin: 4% !default; // space between columns
+
+// Misc
+$global-radius: 0px !default;
+
+
+
+
+$white: #FFF;
+
+$light-grey: #f2f2f2;
+$dark-grey: #4D4D4D;
+$rfn-green: #056330;
+$sky-captain: #1D79B4;
+$orange-juice: #DB542E;
+
+$light-orange: #fbede9;
+
+$second-orange: #D95537;
+
+$night-blue: #1F2D39;
+
+$primary-color: $night-blue;
+$secondary-color: $orange-juice;
+
+$link-color: $orange-juice;
+$link-visited: $orange-juice;
+$link-active: lighten($orange-juice, 10%);
+
+$font-family-heading: "Baton", Arial, sans-serif;
+
+
+/** utility clearfix from nicolas gallagher. this is what Bootstrap uses and it is so elegant <3 **/
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
