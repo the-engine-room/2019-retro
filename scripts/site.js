@@ -61,6 +61,7 @@ $(document).ready(function() {
      * Fix sidebar at some point and remove
      * fixed position at content bottom
      */
+    /*
     $(window).scroll(function () {
       var docHeight = $(document).height();
       var scrollPos = $(window).height() + $(window).scrollTop();
@@ -85,4 +86,5 @@ $(document).ready(function() {
       }
 
     });
+    */
 });

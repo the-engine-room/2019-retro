@@ -7,7 +7,7 @@ body {
   background: $white;
 }
 body > nav  {
-  background: $light-grey;
+  background: $ter-dark-grey;
 }
 
 a#toggle {
@@ -53,6 +53,8 @@ nav {
   z-index: 1;
   position: fixed;
   height: 56px;
+  background: $ter-dark-grey;
+
   @media (#{$bp-larger-than-phablet}) {
     height: 100%;
     padding: 0px 0 0;
@@ -69,11 +71,13 @@ nav {
   .logo {
 
     display: none;
+    background: $ter-orange;
     @media (#{$bp-larger-than-phablet}) {
       float: none;
       height: auto;
-      width: 65%;
-      padding: 40px 20px 0px 20px;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 40px 20px 40px 20px;
       margin: 0 auto;
       display: block;
     }
@@ -90,37 +94,25 @@ nav {
     }
   }
 
-
-
 h1 {
   padding: 10px 0 15px 0;
   margin: 0;
   background: $primary-color;
   color: $dark-grey;
   font-weight: bold;
-
   @media (#{$bp-larger-than-phablet}) {
     color: $primary-color;
     font-size: 60pt;
     font-weight: bold;
     margin: 50px 0px;
-
   }
-
 }
 
-
-
-  a {
+a {
     text-decoration: none;
-
   }
 
-
-
-
-
-  ul.nav {
+ul.nav {
   list-style-type: none;
   margin: 0;
   position: relative;
@@ -139,7 +131,7 @@ h1 {
     }
   }
   li {
-    padding: 10px 30px 10px 30px;
+    padding: 0px 30px 10px 30px;
     margin-bottom: 0;
     font-weight: 400;
     text-align: center;
@@ -148,7 +140,7 @@ h1 {
       padding-top: 65px;
     }
     a {
-      color: $dark-grey;
+      color: white;
       font-size: 21px;
       line-height: 30px;
       text-align: left;
@@ -202,6 +194,10 @@ nav.lang-nav {
 .lang-show { display: block; }
 .lang-hidden { display: none; }
 
+.content.nine.columns.offset-by-three {
+  margin-left: 22%;
+  width: 78%;
+}
 
 // greyed out text and title for english-only content
 body.table-of-contents #books .ref.greyed {
@@ -356,12 +352,10 @@ footer {
 header, .hero {
   background: url('../images/') no-repeat center center;
   background-size: cover;
-  padding-top: 80px;
-  padding-bottom: 60px;
 
   &.hero1 {
-    background: url('../images/header-bkg3.png') no-repeat left center;
-    background-size: 98%;
+    background: url('../images/C3.png') no-repeat left center;
+    background-size: contain;
     padding-top: 180px;
     padding-bottom: 170px;
     padding-left: 20px;
@@ -397,6 +391,10 @@ header, .hero {
       margin-left: 5.4%;
     }
 
+    &.main-title {
+      text-align: center;
+      margin-top: -80px;
+    }
     .year {
       float: left;
       clear: left;
@@ -404,7 +402,7 @@ header, .hero {
       font-weight: 900;
     }
     .line-1 { font-size: 38px; float: left; clear: right; margin-left: 20px; margin-top: 18px; font-weight: normal; width: 60%; }
-    .line-2 { font-size: 58px; float: left; clear: right; margin-left: 20px; line-height: 66px; width: 100%; font-weight: bold; }
+    .line-2 { font-size: 58px; float: left; clear: right; margin-left: 20px; line-height: 66px; width: 90%; font-weight: bold; }
     .line-3 { font-size: 20px; float: left; clear: both;  font-family: 'Roboto'; width: 50%; line-height: 24px; font-weight: normal; }
 
     ~ p {
@@ -419,12 +417,124 @@ header, .hero {
 
 }
 
-#intro-letter p:first-child {
-  margin-top: 60px;
-  margin-bottom: 40px;
+#intro-letter {
+  header {
+    z-index: 0;
+    width: 100%;
+    background: url('/images/main-header.png') no-repeat center top;
+    background-size: cover;
+    height: 17vh;
+    padding-top: 130vh;
+
+    h1 {
+      text-align: center;
+      margin-top: -80px;
+      z-index: 900;
+      span {
+        width: 100%;
+        margin: 0px;
+        text-align: center;
+      }
+    }
+  }
+  article, aside {
+    box-sizing: border-box;
+    margin: 10px 15%;
+  }
+  aside {
+    box-sizing: border-box;
+  	padding: 20px;
+  	background: $light-orange;
+  	font-size: 14pt;
+  	color: #666;
+    h2 { margin-top: 0px; }
+  }
+}
+.page .content.padded {
+  padding: 0% 8%;
+  h1 {
+    text-align: center;
+    margin-bottom: 35px;
+  }
+  article {
+    display: inline-block;
+    margin: 25px 6%;
+    .title {
+      box-sizing: border-box;
+      padding-right: 40px;
+      width: 40%;
+      float:left;
+      text-align: center;
+      h2 {
+        text-align: left;
+        margin-top: 0px;
+        color: $ter-orange;
+        line-height: 160%;
+      }
+      &.title-right {
+        float: right;
+        padding-right: 0px;
+        padding-left: 40px;
+      }
+      img { height: auto; width: 60%; }
+    }
+    .paragraph{
+      width: 60%;
+      float:left;
+      margin-bottom: 50px;
+    }
+
+  }
+}
+hr {
+  width: 40%;
+  border: 0px;
+  height: 9px;
+  clear: both;
+  background-color: $ter-blue;
+  margin: 25px auto;
+}
+#places {
+  position: relative;
+  p {
+    margin-top: -120px;
+    font-weight: bold;
+    margin-left: 40%;
+  }
+  .gallery {
+    .col {
+      box-sizing: border-box;
+      width: 33%;
+      padding: 0px 10px;
+      float: left;
+      &:first-child {
+        text-align: right;
+        padding-top: 60px;
+      }
+      &:nth-child(2){
+        width: 240px;
+      }
+      &:nth-child(3) {
+        padding-top: 60px;
+      }
+      img {
+        width: auto;
+        height: auto;
+      }
+      .retreat {
+        text-align: center;
+        padding: 35px;
+        background: $ter-orange;
+        max-width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+  }
 }
 
 .callout-box {
+  box-sizing: border-box;
+
 	padding: 20px 20px 0px 20px;
 	margin: 40px 25% 40px 0;
 	background: $light-orange;
@@ -436,12 +546,16 @@ header, .hero {
      @media (#{$bp-larger-than-mobile}) { font-size: 3rem; }
      line-height: 1.2;
      letter-spacing: -.1rem;
-     font-family: $font-family-heading;  	
+     font-family: $font-family-heading;
      font-weight: bold;
      font-size: 36pt;
      color: $dark-grey;
   }
 }
+.page section {
+
+}
+
 
 .page .content {
   h1, h2, h3, h4 {
