@@ -954,7 +954,9 @@ img.partner-logo {
   height: 109px;
   background: url(../images/by-the-numbers/pot.svg) repeat top left;
 }
-
+.metrics {
+  text-align: center;
+}
 
 // Story Toggling
 .story-toggle {
@@ -974,10 +976,12 @@ img.partner-logo {
   &.active {
     border-color: #DB552E;
     color: #DB552E;
-    span.label.research:before{ }
-    span.label.engagement:before{ }
-    span.label.technology:before{ }
-    span.label.support:before{ }
+    span.label.research:before{
+      background: url('/images/research_o.png') no-repeat center center;
+    }
+    span.label.engagement:before{ background: url('/images/engagement_o.png') no-repeat center center; }
+    span.label.technology:before{ background: url('/images/technology_o.png') no-repeat center center; }
+    span.label.support:before{ background: url('/images/support_o.png') no-repeat center center;}
 
   }
   span.label {
@@ -1038,7 +1042,7 @@ img.partner-logo {
         display: block; float: left; clear: left;
         width: 48px;
         height: 32px;
-        background: url('/images/research.png') no-repeat center center;
+        background: url('/images/research_o.png') no-repeat center center;
         background-size: contain;
         padding-right: 10px;
         content: ' ';
@@ -1048,7 +1052,7 @@ img.partner-logo {
         display: block; float: left; clear: left;
         width: 48px;
         height: 32px;
-        background: url('/images/engagement.png') no-repeat center center;
+        background: url('/images/engagement_o.png') no-repeat center center;
         padding-right: 10px;
         background-size: contain;
         content: ' ';
@@ -1057,7 +1061,7 @@ img.partner-logo {
         display: block; float: left; clear: left;
         width: 48px;
         height: 32px;
-        background: url('/images/technology.png') no-repeat center center;
+        background: url('/images/technology_o.png') no-repeat center center;
         background-size: contain;
         padding-right: 10px;
         content: ' ';
@@ -1067,7 +1071,7 @@ img.partner-logo {
         width: 48px;
         height: 32px;
 
-        background: url('/images/support.png') no-repeat center center;
+        background: url('/images/support_o.png') no-repeat center center;
         background-size: contain;
         padding-right: 10px;
         content: ' ';
