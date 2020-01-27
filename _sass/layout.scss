@@ -496,6 +496,10 @@ hr {
 }
 #places {
   position: relative;
+  h2 {
+    text-align: center;
+    color: $ter-orange;
+  }
   p {
     margin-top: -120px;
     font-weight: bold;
@@ -504,7 +508,7 @@ hr {
   .gallery {
     .col {
       box-sizing: border-box;
-      width: 33%;
+      width: calc( (100% - 240px) / 2);
       padding: 0px 10px;
       float: left;
       &:first-child {
@@ -949,4 +953,125 @@ img.partner-logo {
   width: 100%;
   height: 109px;
   background: url(../images/by-the-numbers/pot.svg) repeat top left;
+}
+
+
+// Story Toggling
+.story-toggle {
+  border: 3px solid #464646;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 14px 10px;
+  width: 23%;
+  margin-right: 1.65%;
+  font-family: $font-family-heading;
+  text-align: left;
+  line-height: 42px;
+  box-sizing: border-box;
+  height: auto !important;
+  font-size: 22px;
+  text-transform: capitalize;
+  &.active {
+    border-color: #DB552E;
+    color: #DB552E;
+    span.label.research:before{ }
+    span.label.engagement:before{ }
+    span.label.technology:before{ }
+    span.label.support:before{ }
+
+  }
+  span.label {
+    &.research:before {
+      display: block; float: left; clear: left;
+      width: 56px;
+      height: 44px;
+      background: url('/images/research.png') no-repeat center center;
+      padding-right: 10px;
+      content: ' ';
+    }
+    &.engagement:before {
+      display: block; float: left; clear: left;
+      width: 56px;
+      height: 44px;
+      background: url('/images/engagement.png') no-repeat center center;
+      padding-right: 10px;
+      content: ' ';
+    }
+    &.technology:before {
+      display: block; float: left; clear: left;
+      width: 56px;
+      height: 44px;
+      background: url('/images/technology.png') no-repeat center center;
+      padding-right: 10px;
+      content: ' ';
+    }
+    &.support:before {
+      display: block; float: left; clear: left;
+      width: 56px;
+      height: 44px;
+      background: url('/images/support.png') no-repeat center center;
+      padding-right: 10px;
+      content: ' ';
+    }
+  }
+}
+.story-icon-button {
+  width: 56px;
+  display: inline-block;
+  padding-right: 10px;
+}
+.stories.group-wrap{
+  border: 5px solid #DB552E;
+  box-sizing: border-box;
+  border-radius: 8px;
+  .story {
+    h2 {
+      margin-bottom: 25px;
+    }
+    .story-icon {
+      font-size: 20px;
+      color:#DB552E;
+      display: inline-block;
+      padding: 10px;
+      font-family: 'Baton';
+      &.research:before {
+        display: block; float: left; clear: left;
+        width: 48px;
+        height: 32px;
+        background: url('/images/research.png') no-repeat center center;
+        background-size: contain;
+        padding-right: 10px;
+        content: ' ';
+
+      }
+      &.engagement:before {
+        display: block; float: left; clear: left;
+        width: 48px;
+        height: 32px;
+        background: url('/images/engagement.png') no-repeat center center;
+        padding-right: 10px;
+        background-size: contain;
+        content: ' ';
+      }
+      &.technology:before {
+        display: block; float: left; clear: left;
+        width: 48px;
+        height: 32px;
+        background: url('/images/technology.png') no-repeat center center;
+        background-size: contain;
+        padding-right: 10px;
+        content: ' ';
+      }
+      &.support:before {
+        display: block; float: left; clear: left;
+        width: 48px;
+        height: 32px;
+
+        background: url('/images/support.png') no-repeat center center;
+        background-size: contain;
+        padding-right: 10px;
+        content: ' ';
+      }
+    }
+  }
 }

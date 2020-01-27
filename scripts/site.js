@@ -87,4 +87,13 @@ $(document).ready(function() {
 
     });
     */
+
+    $('.story-toggle').click(function(e){
+      e.preventDefault();
+      var target = $(this).data('toggle');
+      $('.story-toggle').removeClass('active');
+      $(this).addClass('active');
+      $('article.story').hide();
+      $('article.story' + target).show();
+    });
 });
