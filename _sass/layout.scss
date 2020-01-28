@@ -420,14 +420,19 @@ header, .hero {
 
 #intro-letter, #whats-next {
   header {
-    z-index: 0;
+
     width: 100%;
-    background: url('/images/main-header.png') no-repeat center top;
+    /*background: url('/images/main-header.png') no-repeat center top;
     background-size: cover;
     height: 17vh;
     padding-top: 130vh;
-
+    */
+    img {
+      z-index: -10;
+      position: relative;
+    }
     h1 {
+      position: relative;
       text-align: center;
       margin-top: -80px;
       z-index: 900;
@@ -1031,7 +1036,7 @@ img.partner-logo {
   border-radius: 8px;
   .story {
     margin-top: 0px;
-    margin-bottom: 0px; 
+    margin-bottom: 0px;
     h2 {
       margin-bottom: 25px;
     }
