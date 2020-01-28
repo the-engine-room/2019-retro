@@ -140,8 +140,9 @@ ul.nav {
       padding-top: 65px;
     }
     a {
+      font-family: $font-family;
       color: white;
-      font-size: 21px;
+      font-size: 18px;
       line-height: 30px;
       text-align: left;
     }
@@ -417,7 +418,7 @@ header, .hero {
 
 }
 
-#intro-letter {
+#intro-letter, #whats-next {
   header {
     z-index: 0;
     width: 100%;
@@ -1029,6 +1030,8 @@ img.partner-logo {
   box-sizing: border-box;
   border-radius: 8px;
   .story {
+    margin-top: 0px;
+    margin-bottom: 0px; 
     h2 {
       margin-bottom: 25px;
     }
