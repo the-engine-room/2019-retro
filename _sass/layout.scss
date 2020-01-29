@@ -24,7 +24,7 @@ a#toggle {
 }
 section.content {
   padding-left: 15px;
-  @media (#{$bp-larger-than-phablet}) { padding-left: 0px; }
+  @media (#{$bp-smaller-than-phablet}) { padding-left: 0px !important; }
 }
 .support-service-logo img.rd-logo {
   width: 80px; height: 80px;
@@ -122,10 +122,11 @@ ul.nav {
   &.visible {
     float: none;
     width: 100%;
-    background: $light-grey;
+    background: $ter-dark-grey;
     height: 100vh;
     position: absolute;
     top: 56px;
+    z-index: 1220;
     @media (#{$bp-larger-than-phablet})  {
       width: calc(80% - 20px);
     }
@@ -435,7 +436,7 @@ header, .hero {
       position: relative;
       text-align: center;
       margin-top: -80px;
-      z-index: 900;
+      z-index: -1;
       span {
         width: 100%;
         margin: 0px;
@@ -454,6 +455,11 @@ header, .hero {
   	font-size: 14pt;
   	color: #666;
     h2 { margin-top: 0px; }
+  }
+  @media (#{$bp-smaller-than-phablet}) {
+    aside {
+      margin: 10px 2%;
+    }
   }
 }
 .page .content.padded {
