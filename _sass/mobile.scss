@@ -1,8 +1,34 @@
 @media (#{$bp-smaller-than-phablet}) {
+  .content.nine.columns.offset-by-three {
+    margin-left: 0;
+    width: 100%;
+  }
+  .gallery .col {
+    width: 100%;
+    clear: both;
+  }
+  .story-toggle span.label { font-size: 14px;}
+  .story-toggle span.label:before {
+    display: block;
+    clear: both !important;
+    float: none !important;
+  }
+
+  .page .content.padded article .title.title-right {
+    display:block; clear: both; width: 100%; padding: 0px !important;
+  }
+
+  .page .content.padded article .title.title-left {
+display:block; clear: both; width: 100%;
+  }
+  .page .content.padded article .paragraph { display: block; width: 100%; }
   header.hero1 {
 
     padding: 100px 0px 35px;
     h1 { margin-left: 5.4%; }
+  }
+  .page .content.padded  {
+    padding: 0% 1%;
   }
   .callout-box {
     width: calc(100% - 70px);
