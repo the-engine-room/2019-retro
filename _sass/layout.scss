@@ -518,6 +518,11 @@ hr {
     font-weight: bold;
     margin-left: 40%;
   }
+  p.fwp {
+    margin-top: 10px;
+    font-weight: bold;
+    margin-left: 0px;
+  }
   .gallery {
     .col {
       box-sizing: border-box;
@@ -974,7 +979,7 @@ img.partner-logo {
 // Story Toggling
 .fx-row {
   display: flex;
-  margin-top: 70px; 
+  margin-top: 70px;
 }
 .story-toggle {
   border: 3px solid #464646;

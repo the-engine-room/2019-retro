@@ -2,7 +2,8 @@ $(document).ready(function() {
 
 
     // nav toggle
-    $('nav a#toggle').on('click', function() {
+    $('nav a#toggle').on('click', function(e) {
+        e.preventDefault();
         $('nav ul.nav').slideToggle(function complete() {
             if ($(this).css('display') === 'block') {
                 $('a#toggle').html("&#8964;"); // chevron down
@@ -19,9 +20,14 @@ $(document).ready(function() {
         // animate scroll to top
         var href = $(this).children('a').attr('href');
         var element = $(href);
-        var offsetTop = $('nav ul.nav').hasClass('visible') ? 45 : -45;
+      //  var offsetTop = $('nav ul.nav').hasClass('visible') ? 45 : -45;
+        var offsetTop = window.innerWidth < 550 ? 80 : 0;
+
+
+
         $('html, body').animate({
-            scrollTop: element.offset().top - element.outerHeight() - offsetTop
+          //  scrollTop: element.offset().top - element.outerHeight() - offsetTop
+          scrollTop: element.offset().top - offsetTop
         }, 1000);
         window.location.hash = href;
 
@@ -32,6 +38,8 @@ $(document).ready(function() {
             $('a#toggle').html("&#8801;");
         }
     });
+
+
     $('.readmore').click(function(e){
       e.preventDefault();
       if($(this).prev('p.readmore-p').hasClass('hidden')){
@@ -61,7 +69,7 @@ $(document).ready(function() {
      * Fix sidebar at some point and remove
      * fixed position at content bottom
      */
-    /*
+/*
     $(window).scroll(function () {
       var docHeight = $(document).height();
       var scrollPos = $(window).height() + $(window).scrollTop();
@@ -86,7 +94,7 @@ $(document).ready(function() {
       }
 
     });
-    */
+*/
 
     $('.story-toggle').click(function(e){
       e.preventDefault();
