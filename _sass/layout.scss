@@ -420,6 +420,7 @@ header, .hero {
 }
 
 #intro-letter, #whats-next {
+  margin-left: -15px;
   header {
 
     width: 100%;
@@ -973,6 +974,7 @@ img.partner-logo {
 // Story Toggling
 .fx-row {
   display: flex;
+  margin-top: 70px; 
 }
 .story-toggle {
   border: 3px solid #464646;
